@@ -1,0 +1,22 @@
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f6f8fb;
+  text-align: center;
+  padding: 24px;
+}
+
+.landing-title {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #1f2937;
+}
+
+.landing-subtitle {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #4b5563;
+}
