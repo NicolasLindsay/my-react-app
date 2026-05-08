@@ -3,20 +3,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
   background: #f6f8fb;
+  padding: 24px clamp(16px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.landing-page .landing-nav {
+  max-width: min(1320px, 100%);
+}
+
+.landing-page__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: min(1320px, 100%);
+  padding: clamp(24px, 5vh, 56px) 0;
   text-align: center;
-  padding: 24px;
+}
+
+.landing-page__main .landing-bumpups,
+.landing-page__main .landing-timestamps {
+  max-width: min(880px, 100%);
 }
 
 .landing-title {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 5vw + 1rem, 3.75rem);
   color: #1f2937;
 }
 
 .landing-subtitle {
-  margin-top: 12px;
-  font-size: 1rem;
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.5vw + 0.75rem, 1.25rem);
   color: #4b5563;
 }
