@@ -2,8 +2,9 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="landing-footer">
-      <p className="landing-footer__copy">© {new Date().getFullYear()} App. All rights reserved.</p>
+    <footer className="footer">
+      <p>Market Intelligence Hub</p>
+      <span>Built for research, tracking, and specialized AI workflows.</span>
     </footer>
   );
 }

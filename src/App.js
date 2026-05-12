@@ -1,9 +1,9 @@
-import './App.css';
-import LandingPage from './unAuth/LandingPage';
+import "./App.css";
+import LandingPage from "./unAuth/LandingPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <LandingPage />
     </div>
   );

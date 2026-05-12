@@ -1,44 +1,102 @@
 .landing-page {
   min-height: 100vh;
+  width: 100%;
+  background: #f6f8fb;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background: #f6f8fb;
-  padding: 24px clamp(16px, 4vw, 48px);
-  box-sizing: border-box;
-}
-
-.landing-page .landing-nav {
-  max-width: min(1320px, 100%);
 }
 
 .landing-page__main {
-  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 72px 32px 56px;
+}
+
+.landing-hero {
+  width: 100%;
+  padding: 72px 56px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.landing-hero__eyebrow {
+  margin: 0 0 18px;
+  color: #2f5f1d;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.landing-hero__title {
+  max-width: 860px;
+  margin: 0;
+  color: #111827;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.landing-hero__subtitle {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: #4b5563;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.landing-hero__actions {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.landing-hero__button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: min(1320px, 100%);
-  padding: clamp(24px, 5vh, 56px) 0;
-  text-align: center;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.landing-page__main .landing-bumpups,
-.landing-page__main .landing-timestamps {
-  max-width: min(880px, 100%);
+.landing-hero__button--primary {
+  background: #111827;
+  color: #ffffff;
 }
 
-.landing-title {
-  margin: 0;
-  font-size: clamp(2.5rem, 5vw + 1rem, 3.75rem);
-  color: #1f2937;
+.landing-hero__button--secondary {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
 }
 
-.landing-subtitle {
-  margin-top: 14px;
-  margin-bottom: 0;
-  font-size: clamp(1rem, 1.5vw + 0.75rem, 1.25rem);
-  color: #4b5563;
+.landing-hero__button:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+  .landing-page__main {
+    padding: 40px 18px;
+  }
+
+  .landing-hero {
+    padding: 44px 28px;
+    border-radius: 22px;
+  }
+
+  .landing-hero__actions {
+    flex-direction: column;
+  }
+
+  .landing-hero__button {
+    width: 100%;
+  }
 }
