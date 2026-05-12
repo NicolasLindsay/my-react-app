@@ -1,0 +1,40 @@
+.landing-timestamps {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.landing-timestamps__title {
+  margin: 0 0 16px;
+  font-size: 1.125rem;
+  color: #1f2937;
+}
+
+.landing-timestamps__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.landing-timestamps__list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+  font-size: 0.9375rem;
+}
+
+.landing-timestamps__list li:last-child {
+  border-bottom: none;
+}
+
+.landing-timestamps__list time {
+  font-weight: 600;
+  color: #374151;
+}

@@ -1,0 +1,33 @@
+.landing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.landing-nav__brand {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #1f2937;
+}
+
+.landing-nav__links {
+  display: flex;
+  gap: 20px;
+}
+
+.landing-nav__links a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.landing-nav__links a:hover {
+  color: #1f2937;
+}

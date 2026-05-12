@@ -1,0 +1,12 @@
+.landing-footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.landing-footer__copy {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}

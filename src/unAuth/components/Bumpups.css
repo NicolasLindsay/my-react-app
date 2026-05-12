@@ -1,0 +1,22 @@
+.landing-bumpups {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 32px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.landing-bumpups__title {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  color: #1f2937;
+}
+
+.landing-bumpups__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
