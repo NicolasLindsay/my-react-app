@@ -1,8 +1,11 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import {
+  getFunctions,
+  connectFunctionsEmulator,
+} from "firebase/functions";
 
+// Your Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -10,13 +13,27 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const analytics = getAnalytics(app);
-const db = getFirestore(app);
-const auth = getAuth(app);
 
-export { db, auth, analytics };
+// --- NEW: Initialize Functions ---
+const functions = getFunctions(app);
+
+// --- NEW: Emulator wiring for Functions only ---
+if (
+  window.location.hostname === "localhost" ||
+  process.env.REACT_APP_ENV === "local"
+) {
+  connectFunctionsEmulator(functions, "localhost", 5001);
+}
+
+// Export whatever you need elsewhere
+export {
+  app,
+  analytics,
+  functions,
+};

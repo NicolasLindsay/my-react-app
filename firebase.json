@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -15,8 +15,8 @@
   },
   "functions": [
     {
-      "source": "functions",
-      "codebase": "default",
+      "source": "backend",
+      "codebase": "backend",
       "disallowLegacyRuntimeConfig": true,
       "ignore": [
         "venv",
